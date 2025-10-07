@@ -129,5 +129,52 @@ ol {
 }
 
 .content__video-card-description-container{
-  flex-grow: calc(1);;
+  flex-grow: calc(1); /* Определяет свободное пространство*/
+}
+
+.search-form__fieldset-title{
+  font-family: 'Fira Sans Condensed', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.title{
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 94%;
+  font-family: 'Oswald', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+.content__accent{
+  display: inline-block;
+  font-family: 'Oswald', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+  color:#545050;
+  position: absolute;
+}
+
+.content__card-link{
+  text-decoration: none;
+  color:#fff;
+}
+
+.content__video-card-title{
+  font-size: 30px;
+  max-width: 196px;
+  line-height: 100%;
+  overflow: hidden; /* Скрывает переполненный текст */
+  white-space: nowrap; /* Запрещает перенос текста на новую строку */
+  text-overflow: ellipsis; /* Заменяет переполненный текст на многоточие */
+}
+
+.content__video-card-description {
+  line-height: 16.2px; /* Установите нужное значение line-height */
+  overflow: hidden; /* Скрывает переполненный текст */
+  display: -webkit-box; /* Устанавливает блочный контекст для flexbox */
+  -webkit-box-orient: vertical; /* Указывает на вертикальную ориентацию */
+  -webkit-line-clamp: 3; /* Устанавливает максимальное количество строк */
+  max-height: calc(16.2px * 3); /* Устанавливает максимальную высоту для 3 строк */
 }
