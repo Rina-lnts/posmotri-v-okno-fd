@@ -232,3 +232,29 @@ gap: 5px;
     border: 1px solid #fff; 
 
 }
+
+.search-form__pseudo-checkbox{
+  width: 19px;
+  height: 19px;
+  border: #fff 1px solid;
+  padding: 1px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.search-form__pseudo-checkbox::after{
+  content: ""; 
+    display: block; 
+    background-color: white; 
+    width: 100%; 
+    height: 100%; 
+    opacity: 0;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  opacity: 1;
+}
+
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+}
