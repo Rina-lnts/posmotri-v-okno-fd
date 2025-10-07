@@ -136,6 +136,7 @@ ol {
   font-family: 'Fira Sans Condensed', Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
+  padding-bottom: 5px;
 }
 
 .title{
@@ -171,10 +172,63 @@ ol {
 }
 
 .content__video-card-description {
-  line-height: 16.2px; /* Установите нужное значение line-height */
+  line-height: 16.2px; 
   overflow: hidden; /* Скрывает переполненный текст */
   display: -webkit-box; /* Устанавливает блочный контекст для flexbox */
   -webkit-box-orient: vertical; /* Указывает на вертикальную ориентацию */
   -webkit-line-clamp: 3; /* Устанавливает максимальное количество строк */
   max-height: calc(16.2px * 3); /* Устанавливает максимальную высоту для 3 строк */
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.search-form__checkbox-list{
+display: flex;
+gap: 5px;
+}
+
+.search-form__fieldset{
+  border: none;
+}
+
+.search-form__label {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    width: fit-content;
+}
+
+.search-form__textfield {
+    width: 225px; 
+    height: 27px;
+    border: none; /* Убираем стандартные границы */
+    border-top: 1px solid #ccc; /* Верхняя граница */
+    border-bottom: 1px solid #ccc; /* Нижняя граница */
+    background-color: #1b1919; 
+    color: #fff; 
+    appearance: none; 
+    font-family: 'Fira Sans Condensed', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.search-form__textfield::placeholder {
+    color: rgb(255, 255, 255, 0.7); /* Цвет подсказки */
+}
+
+
+.search-form__textfield:focus {
+    outline: none; 
+}
+
+.search-form__label:has(.search-form__textfield:focus-visible) {
+    border: 1px solid #fff; 
+
 }
