@@ -81,14 +81,18 @@ ol {
 }
 
 .content__list-container {
-    height: 298px; 
-    overflow-y: auto; /* Скролл при переполнении по вертикали */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  block-size: 298px;
+  overflow-y: auto;
+  gap: 30px;
 }
 
 .content__details h2 {
   width: 100%;
   height: 100%;
-  padding-top: 26px; 
 }
 
 .result__video-container {
@@ -117,7 +121,8 @@ ol {
 
 .content__video-card {
   display: flex;                
-  align-items: flex-start;      
+  align-items: flex-start;
+  justify-content: space-between;   
 }
 
 .content__video-card-thumbnail {
@@ -155,6 +160,7 @@ ol {
   color:#545050;
   position: relative;
 }
+
 .content__card-link {
     text-decoration: none;
     color: #fff;
@@ -163,7 +169,7 @@ ol {
 }
 
 .content__card-link_current {
-    background-color: #1b1919;
+    background-color: #545050;
 }
 
 .content__card-link:active {
@@ -184,20 +190,24 @@ ol {
 }
 
 .content__video-card-title {
+  font-family: "Oswald", sans-serif;
   font-size: 30px;
-  max-width: 196px;
+  text-transform: uppercase;
   line-height: 100%;
-  overflow: hidden; /* Скрывает переполненный текст */
-  white-space: nowrap; /* Запрещает перенос текста на новую строку */
-  text-overflow: ellipsis; /* Заменяет переполненный текст на многоточие */
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .content__video-card-description {
+  font-size: 18px;
+  font-weight: 400;
   line-height: 16.2px; 
   overflow: hidden; /* Скрывает переполненный текст */
   display: -webkit-box; /* Устанавливает блочный контекст для flexbox */
   -webkit-box-orient: vertical; /* Указывает на вертикальную ориентацию */
-  -webkit-line-clamp: 3; /* Устанавливает максимальное количество строк */
+  -webkit-line-clamp: 2; /* Устанавливает максимальное количество строк */
   max-height: calc(16.2px * 3); /* Устанавливает максимальную высоту для 3 строк */
 }
 
