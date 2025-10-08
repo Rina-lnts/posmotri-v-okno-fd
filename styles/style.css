@@ -60,7 +60,7 @@ ol {
 .content {
    display: flex;              
   flex-direction: row;       
-  align-items: flex-end;     /* Прижимаем к низу по вертикали */
+  align-items: flex-end;     /*  к низу по вертикали */
   width: 1140px;
   gap: 30px;
   }
@@ -77,7 +77,7 @@ ol {
     display: flex;
     flex-direction: row; 
     justify-content: space-between; /* Пропорциональное распределение свободного пространства */
-    align-items: flex-start; /* Прижимаем к верхней части контейнера */
+    align-items: flex-start; /* к верхней части контейнера */
 }
 
 .content__list-container {
@@ -112,7 +112,6 @@ ol {
 .content__list-container {
   display: flex;
   flex-direction: column;
-  gap: 30px;
 }
 
 .content__video-card {
@@ -258,8 +257,7 @@ gap: 10px;
 }
 
 .search-form__label:has(.search-form__textfield:focus-visible) {
-    border: 1px solid #fff; 
-
+    border: 1px solid #fff;
 }
 
 .search-form__pseudo-checkbox {
