@@ -81,13 +81,9 @@ ol {
 }
 
 .content__list-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
   margin-top: 24px;
   block-size: 298px;
   overflow-y: auto;
-  gap: 30px;
 }
 
 .content__details h2 {
@@ -97,11 +93,10 @@ ol {
 
 .result__video-container {
     width: 711px;
-    margin-bottom: 16px;
 }
 
 .result__video {
-   width: 100%;
+   width: 711px;
   height: 100%;
   object-fit: cover;
   display: block;
@@ -128,11 +123,11 @@ ol {
 .content__video-card-thumbnail {
   min-width: 194px;
   height: 103px;
-  object-fit: fill;
+  object-fit: cover;
   object-position: 100%;
 }
 
-.content__video-card-description-container {
+.content__video-card-description-container h2 {
   flex-grow: calc(1); /* Определяет свободное пространство*/
 }
 
@@ -165,7 +160,7 @@ ol {
     text-decoration: none;
     color: #fff;
     display: block;
-    padding: 10px; 
+    max-width: 100%;
 }
 
 .content__card-link_current {
@@ -202,8 +197,8 @@ ol {
 
 .content__video-card-description {
   font-size: 18px;
+  padding-top: 2px;
   font-weight: 400;
-  line-height: 16.2px; 
   overflow: hidden; /* Скрывает переполненный текст */
   display: -webkit-box; /* Устанавливает блочный контекст для flexbox */
   -webkit-box-orient: vertical; /* Указывает на вертикальную ориентацию */
@@ -223,7 +218,7 @@ ol {
 
 .search-form__checkbox-list {
 display: flex;
-gap: 5px;
+gap: 10px;
 }
 
 .search-form__fieldset {
