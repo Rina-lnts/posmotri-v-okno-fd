@@ -129,7 +129,7 @@ ol {
 .content__video-card-description-container h2 {
     flex-grow: calc(1);
     /* Определяет свободное пространство*/
-    padding-bottom: 4px;
+    padding-bottom: 6px;
 }
 
 .search-form__fieldset-title {
@@ -216,7 +216,8 @@ ol {
 
 .search-form__checkbox-list {
     display: flex;
-    gap: 10px;
+    width: 212px;
+    gap: 15px;
 }
 
 .search-form__fieldset {
@@ -226,7 +227,7 @@ ol {
 .search-form__label {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     width: fit-content;
     cursor: pointer;
 }
@@ -315,3 +316,4 @@ ol {
 .result__video-container {
     position: relative;
 }
+
