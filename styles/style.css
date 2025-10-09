@@ -16,6 +16,9 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -50,40 +53,39 @@ ol {
   background-color: #D9D9D9;
 }
 
-
-.page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .content {
-   display: flex;              
-  flex-direction: row;       
-  align-items: flex-end;     /*  к низу по вертикали */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  /*  к низу по вертикали */
   width: 1140px;
   gap: 30px;
-  }
+}
 
-  .result {
-    flex: 1;
-  }
+.result {
+  flex: 1;
+}
 
-  .content__details {
-    flex: 2;
-  }
+.content__details {
+  flex: 2;
+}
 
 .search-form {
-    display: flex;
-    flex-direction: row; 
-    justify-content: space-between; /* Пропорциональное распределение свободного пространства */
-    align-items: flex-start; /* к верхней части контейнера */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* Пропорциональное распределение свободного пространства */
+  align-items: flex-start;
+  /* к верхней части контейнера */
 }
 
 .content__list-container {
   margin-top: 24px;
   block-size: 298px;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .content__details h2 {
@@ -92,15 +94,17 @@ ol {
 }
 
 .result__video-container {
-    position: relative;
-    inline-size: 711px;
-    block-size: 386px;
-    margin-block-end: 16px;
+  position: relative;
+  inline-size: 711px;
+  block-size: 386px;
+  margin-block-end: 16px;
 }
+
 .result__video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center
 }
 
 .content__list {
@@ -109,15 +113,10 @@ ol {
   gap: 30px;
 }
 
-.content__list-container {
-  display: flex;
-  flex-direction: column;
-}
-
 .content__video-card {
-  display: flex;                
+  display: flex;
   align-items: flex-start;
-  justify-content: space-between;   
+  justify-content: space-between;
 }
 
 .content__video-card-thumbnail {
@@ -127,8 +126,9 @@ ol {
   object-position: 100%;
 }
 
-.content__video-card-description-container h2{
-  flex-grow: calc(1); /* Определяет свободное пространство*/
+.content__video-card-description-container h2 {
+  flex-grow: calc(1);
+  /* Определяет свободное пространство*/
   padding-bottom: 4px;
 }
 
@@ -148,46 +148,41 @@ ol {
 }
 
 .content__accent {
-  display: inline-block;
-  font-family: 'Oswald', Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  line-height: 94%;
-  text-transform: uppercase;
-  color:#545050;
-  position: relative;
+  color: #545050;
 }
 
 .content__card-link {
-    text-decoration: none;
-    color: #fff;
-    display: block;
-    padding: 1px; 
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 1px;
 }
 
 .content__card-link_current {
-    background-color: #545050;
+  background-color: #545050;
 }
 
 .content__card-link:active {
-    background-color: #545050;
+  background-color: #545050;
 }
 
 .content__card-link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .content__card-link:focus-visible {
-    outline: 2px solid #fff;
+  outline: 2px solid #fff;
 }
 
 .content__list-item {
-    padding-left: 3px;
-    padding-right: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 .content__video-card-title {
   font-family: "Oswald", sans-serif;
   font-size: 30px;
+  max-width: 196px;
   text-transform: uppercase;
   line-height: 100%;
   font-weight: 700;
@@ -200,11 +195,14 @@ ol {
   font-size: 18px;
   font-weight: 400;
   line-height: 16.2px;
-  overflow: hidden; /* Скрывает переполненный текст */
-  display: -webkit-box; /* Устанавливает блочный контекст для flexbox */
-  -webkit-box-orient: vertical; /* Указывает на вертикальную ориентацию */
-  -webkit-line-clamp: 2; /* Устанавливает максимальное количество строк */
-  max-height: calc(16.2px * 3); /* Устанавливает максимальную высоту для 3 строк */
+  overflow: hidden;
+  /* Скрывает переполненный текст */
+  display: -webkit-box;
+  /* Устанавливает блочный контекст для flexbox */
+  -webkit-box-orient: vertical;
+  /* Указывает на вертикальную ориентацию */
+  -webkit-line-clamp: 2;
+  /* Устанавливает максимальное количество строк */
 }
 
 .visually-hidden {
@@ -218,8 +216,8 @@ ol {
 }
 
 .search-form__checkbox-list {
-display: flex;
-gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .search-form__fieldset {
@@ -227,37 +225,37 @@ gap: 10px;
 }
 
 .search-form__label {
-    display: flex;
-    align-items: center; 
-    gap: 10px; 
-    width: fit-content;
-    cursor: pointer
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  cursor: pointer
 }
 
 .search-form__textfield {
-    width: 225px; 
-    height: 27px;
-    border: none;
-    border-top: 1px solid #ccc; 
-    border-bottom: 1px solid #ccc; 
-    background-color: #1b1919; 
-    color: #fff; 
-    appearance: none; 
-    font-family: 'Fira Sans Condensed', Arial, Helvetica, sans-serif;
-    font-size: 18px;
+  min-width: 225px;
+  min-height: 27px;
+  border: none;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-color: #1b1919;
+  color: #fff;
+  appearance: none;
+  font-family: 'Fira Sans Condensed', Arial, Helvetica, sans-serif;
+  font-size: 18px;
 }
 
 .search-form__textfield::placeholder {
-    color: rgb(255, 255, 255, 0.7); 
+  color: rgb(255, 255, 255, 0.7);
 }
 
 
 .search-form__textfield:focus {
-    outline: none; 
+  outline: none;
 }
 
 .search-form__label:has(.search-form__textfield:focus-visible) {
-    border: 1px solid #fff;
+  outline: 1px solid #fff;
 }
 
 .search-form__pseudo-checkbox {
@@ -270,15 +268,15 @@ gap: 10px;
 }
 
 .search-form__pseudo-checkbox::after {
-  content: ""; 
-    display: block; 
-    background-color: white; 
-    width: 100%; 
-    height: 100%; 
-    opacity: 0;
+  content: "";
+  display: block;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
 }
 
-.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+.search-form__checkbox:checked+.search-form__pseudo-checkbox::after {
   opacity: 1;
 }
 
@@ -290,14 +288,15 @@ gap: 10px;
   border: #FFFFFF 1px solid;
   font-size: 18px;
   font-family: 'Fira Sans Condensed', Arial, Helvetica, sans-serif;
- background-color: transparent;
- color: #fff;
- cursor: pointer
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  min-height: 34px;
 }
 
 .search-form__submit-button {
-  width: 194px;
-  height: 34px;
+  min-width: 194px;
   gap: 10px;
   align-self: flex-end;
 }
@@ -314,15 +313,6 @@ gap: 10px;
   background-color: #545050;
 }
 
-.result__video-container,
-.content__list-container {
-    position: relative; 
+.result__video-container {
+  position: relative;
 }
-
-.preloader {
-    background-color: rgba(255, 255, 255, 0.8);
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-}
-
