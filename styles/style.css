@@ -216,7 +216,6 @@ ol {
 
 .search-form__checkbox-list {
     display: flex;
-    width: 212px;
     gap: 15px;
 }
 
@@ -313,7 +312,4 @@ ol {
     background-color: #545050;
 }
 
-.result__video-container {
-    position: relative;
-}
 
